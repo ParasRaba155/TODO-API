@@ -1,0 +1,27 @@
+{
+  "name": "todo_app_nodejs",
+  "version": "1.0.0",
+  "description": "Todo appllication using nodejs",
+  "main": "index.js",
+  "author": "Paras Raba",
+  "license": "ISC",
+  "scripts": {
+    "start": "export ENVIRONMENT_NAME=local && nodemon"
+  },
+  "engines": {
+    "node": "14.17.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "bunyan": "^1.8.15",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "express": "~4.16.1",
+    "helmet": "^5.1.0",
+    "mongoose": "^6.4.0",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.16"
+  },
+  "type": "module"
+}
