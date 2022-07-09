@@ -1,7 +1,6 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 import getMongoUri from '../utils/mongoURI.js';
-import log from '../utils/logger.js';
-
+import log from 'utils/logger.js';
 
 export const mongoConnector = () => {
     let db;

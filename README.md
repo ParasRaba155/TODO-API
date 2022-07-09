@@ -1,1 +1,1 @@
-# Very basic implimantation of todo list using express nodejs and moongose.
+# Very basic implementation of todo list using express nodejs and mongoose.

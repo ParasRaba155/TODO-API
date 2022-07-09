@@ -4,3 +4,7 @@ node_modules
 # enviroment files
 .env
 .env.local
+
+# ide files
+.idea
+.vscode

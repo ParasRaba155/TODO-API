@@ -6,7 +6,17 @@
   "author": "Paras Raba",
   "license": "ISC",
   "scripts": {
-    "start": "export ENVIRONMENT_NAME=local && nodemon"
+    "coverage": "jest --coverage",
+    "start": "export ENVIRONMENT_NAME=local && nodemon",
+    "postinstall": "link-module-alias",
+    "preinstall": "command -v link-module-alias && link-module-alias clean || true",
+    "test": "jest --detectOpenHandles --silent=false",
+    "format": "prettier-standard './**/**/*.js'",
+    "lint": "npm run lint:js",
+    "lint:eslint": "eslint --ignore-path .gitignore --ignore-pattern server/bin",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern server/bin --fix",
+    "lint:js": "npm run lint:eslint -- . ",
+    "prettify": "prettier --write"
   },
   "engines": {
     "node": "14.17.x"
@@ -23,5 +33,26 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.16"
   },
-  "type": "module"
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/node": "^7.18.5",
+    "@babel/plugin-transform-runtime": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/runtime": "^7.18.3",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.1",
+    "jest-coverage-badges": "^1.1.2",
+    "link-module-alias": "^1.2.0",
+    "prettier": "^2.7.0",
+    "prettier-standard": "^16.4.1",
+    "supertest": "^6.2.2"
+  },
+  "_moduleAliases": {
+    "data": "./server/data",
+    "utils": "./server/utils",
+    "routes": "./server/routes"
+  }
 }

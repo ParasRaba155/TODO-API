@@ -8,4 +8,4 @@ export default global.log = bunyan.createLogger({
             stream: process.stdout
         }
     ]
-})
+});
